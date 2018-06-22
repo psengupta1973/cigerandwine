@@ -1,0 +1,39 @@
+Get all wines:
+curl -i -X GET http://localhost:5000/wines
+
+Get wine with _id value of 5069b47aa892630aae000007 (use a value that exists in your database):
+curl -i -X GET http://localhost:5000/wines/5069b47aa892630aae000007
+
+Delete wine with _id value of 5069b47aa892630aae000007:
+curl -i -X DELETE http://localhost:5000/wines/5069b47aa892630aae000007
+
+Add a new wine:
+curl -i -X POST -H 'Content-Type: application/json' -d '{"name": "New Wine", "year": "2009"}' http://localhost:5000/wines
+
+Modify wine with _id value of 5069b47aa892630aae000007:
+curl -i -X PUT -H 'Content-Type: application/json' -d '{"name": "New Wine", "year": "2010"}' http://localhost:5000/wines/5069b47aa892630aae000007
+--------------------------------------------------------------------------
+Get all cigars:
+curl -i -X GET http://localhost:5000/cigars
+
+Get ciagr with _id value of 5069b47aa892630aae000007 (use a value that exists in your database):
+curl -i -X GET http://localhost:5000/cigars/51c81b0aaa6c7fa34b000004
+
+Delete cigar with _id value of 5069b47aa892630aae000007:
+curl -i -X DELETE http://localhost:5000/cigars/51c81b0aaa6c7fa34b000004
+
+Add a new cigar:
+curl -i -X POST -H 'Content-Type: application/json' -d ' {"name": "1876 Reserve Robusto","package": "Bundle of 25","strength": "Medium","country": "Ecuador", "shape": "Robusto", "size": "5 x 50", "description": "1876 Reserve is a sleeper of a premium from Jose Blanco. Offering a smooth Connecticut-seed wrapper grown in the foggy mist of Ecuador, this attractive light-brown wrapper has an oily sheen and flawless, smooth character. The Cuban-seed Dominican and Nicaraguan long-filler combination adds to its luster, yielding an unmistakable, mild and mellow taste with a pleasant aroma.", "picture": "1876_Reserve_Robusto.jpg"}' http://localhost:5000/cigars
+
+Modify cigar with _id value of 5069b47aa892630aae000007:
+curl -i -X PUT -H 'Content-Type: application/json' -d ' {
+    "name": "1876 Reserve Toro",
+    "package": "Bundle of 25",
+    "strength": "Mild",
+    "country": "Ecuador",
+    "shape": "Toro",
+    "size": "6 x 50",
+    "description": "1876 Reserve is a sleeper of a premium from Jose Blanco. Offering a smooth Connecticut-seed wrapper grown in the foggy mist of Ecuador, this attractive light-brown wrapper has an oily sheen and flawless, smooth character. The Cuban-seed Dominican and Nicaraguan long-filler combination adds to its luster, yielding an unmistakable, mild and mellow taste with a pleasant aroma.",
+    "picture": "1876_Reserve_Toro.jpg"
+  }' http://localhost:5000/cigars/51c81a60aa6c7fa34b000002
+
